@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/perfect-squares/submissions/847980359/
 Clearly a DP Question:
-Includes 2 solutions, one in pattern of LIS and other one is plain DP recursion
+# Includes 2 solutions, one in pattern of LIS and other one is plain DP recursion
 
 import math
 class Solution:
