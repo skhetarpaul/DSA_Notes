@@ -1,0 +1,6 @@
+Force push any code in case of errors: fetch first
+    git push -f origin master
+
+Set origin before pushing it to github
+    git remote set-url origin https://github.com/skhetarpaul/<repo-name>
+
