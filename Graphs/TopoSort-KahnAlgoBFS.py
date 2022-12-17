@@ -1,3 +1,10 @@
+# https://leetcode.com/problems/course-schedule/description/
+#Read the question, it  simply asks in a dependency graph is it possible to linearly order the verticies?
+"""
+If yes, return True
+Else False
+Here, we can use Topo Sort to check if this graph is somehow forming a cycle with Kahn Algo(BFS Topo sort)
+"""
 from queue import Queue
 
 class Solution:
