@@ -1,0 +1,91 @@
+#User function Template for python3
+'''An application of Topological sort, which miight reduce the complexity of a uestion that rquires to find shortest path of every node from a source node.
+This takes into considweration the fact that, all nodes are visited only when all prereq nodes are visited i.e.
+
+Finding shortest path to a vertex is easy if you already know shortest path of all preceding vertices.
+'''
+from typing import List
+
+class Solution:
+    def shortestPath(self, n : int, m : int, edges : List[List[int]]) -> List[int]:
+        adj = [[] for i in range(n)]
+        for x,y,wt in edges:
+            adj[x].append((y,wt))
+        #find the topological sort
+        stk = []
+        visited = [0 for i in range(n)]
+        def DFS(node):
+            visited[node] = 1
+            for nbr,d in adj[node]:
+                if not visited[nbr]:
+                    DFS(nbr)
+            stk.append(node)
+        for i in range(n):
+            if visited[i]==0:
+                DFS(i)
+        #We got the topologicsal sort, pop out elements one by one from the stack
+        distance = [float("inf") for i in range(n)]
+        distance[0] = 0
+        while not len(stk)==0:
+            top = stk.pop()
+            for nbr, wt in adj[top]:
+                if distance[top] + wt<distance[nbr]:
+                    distance[nbr] = distance[top] + wt
+        for i in range(n):
+            if distance[i]==float("inf"):
+                distance[i] = -1
+        return distance
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+from typing import List
+
+
+
+
+class IntMatrix:
+    def __init__(self) -> None:
+        pass
+    def Input(self,n,m):
+        matrix=[]
+        #matrix input
+        for _ in range(n):
+            matrix.append([int(i) for i in input().strip().split()])
+        return matrix
+    def Print(self,arr):
+        for i in arr:
+            for j in i:
+                print(j,end=" ")
+            print()
+
+
+
+class IntArray:
+    def __init__(self) -> None:
+        pass
+    def Input(self,n):
+        arr=[int(i) for i in input().strip().split()]#array input
+        return arr
+    def Print(self,arr):
+        for i in arr:
+            print(i,end=" ")
+        print()
+
+
+if __name__=="__main__":
+    t = int(input())
+    for _ in range(t):
+        
+        n,m=map(int,input().split())
+        
+        
+        edges=IntMatrix().Input(m, 3)
+        
+        obj = Solution()
+        res = obj.shortestPath(n, m, edges)
+        
+        IntArray().Print(res)
+# } Driver Code Ends
