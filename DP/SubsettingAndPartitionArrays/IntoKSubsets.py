@@ -51,7 +51,7 @@ class Solution:
                 elif index>=n or currsum>partsum:
                     # print("case2")
                     return False
-                elif (bucketnum,currsum, index) in d:
+                elif (bucketnum,currsum, index, tuple(self.collected)) in d:
                     return d[(bucketnum,currsum, index, tuple(self.collected))]
                 else:
 

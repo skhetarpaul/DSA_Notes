@@ -1,0 +1,15 @@
+Points to consider:
+    Dijkstra Algorithm- O(ElogV)
+        ->Can be implemented by set and Priority Queue
+        ->Single source shortest pth calculation
+        ->Does not work with negative edge weight
+        
+    Find Shortest Path from  source node in a DAG:
+        Note that, no cycle is given here so no need for visited array
+        We can further reduce the complexity using the Topological sort because:
+            In a DAG, A node can only be reavhed by shortest path if its prereq. nodes are reached thru a shortest path. Hence an order can be maintained considering the dependency of each node on other nodes.
+            OR,
+            Finding shortest path to a vertex is easy if you already know shortest path of all preceding vertices.
+    
+    Find Shortest Path from  source node in a Undirected Graph with Unit weights:
+        This can simply use application of simple BFS algrithm.
