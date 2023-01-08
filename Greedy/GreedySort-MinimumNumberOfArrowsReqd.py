@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/
-
+'''In any of similar problems, wherer you need to minimize an operation for given range, TRY to sort the given array usually by endrange or arr[i][1]. 
+Once sorted, keep pointer on first point and iterate, if range collides do nothing and continue.
+If range does not collide, do increase counter(ans) by 1 and modify pointer to the current iteration's endpoint.'''
 class Solution:
     def findMinArrowShots(self, points):
         if points==[]:
