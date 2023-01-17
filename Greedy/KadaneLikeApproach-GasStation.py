@@ -1,6 +1,9 @@
-# https://leetcode.com/problems/gas-station/description/class Solution:
 
+# https://leetcode.com/problems/gas-station/description/
+# An algoritm like Kadanse's algorithm
 
+class Solution:
+    
     def canCompleteCircuit(self, gas, cost):
         #base case
         if sum(gas)-sum(cost)<0:

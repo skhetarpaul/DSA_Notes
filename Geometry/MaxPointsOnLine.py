@@ -3,7 +3,7 @@
 
 
 class Solution:
-    def maxPoints(self, points: List[List[int]]) -> int:
+    def maxPoints(self, points):
         if len(points) in [1,2]:
             return len(points)
         d = {}

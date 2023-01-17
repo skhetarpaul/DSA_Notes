@@ -5,7 +5,7 @@
 import heapq
 
 class Solution:
-    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+    def networkDelayTime(self, times, n, k):
         adj = [set() for i in range(n)]
         for u,v,w in times:
             adj[u-1].add((v-1,w))
