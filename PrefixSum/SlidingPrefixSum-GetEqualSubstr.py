@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/get-equal-substrings-within-budget/description/
 
-'''Intuition for Prefix sum/SLiding window would be application of substring where addition is required to match a condition i.e. to amtch <=maxcost
+'''Intuition for Prefix sum/SLiding window would be application of substring where addition is required to match a condition i.e. to amtch <=maxcost'''
 
 class Solution:
     def equalSubstring(self, s: str, t: str, maxCost: int) -> int:

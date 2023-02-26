@@ -11,7 +11,7 @@ If no idea, then possible hints could be:
     arr element could reach upto: 10**9'''
 
 class Solution:
-    def minCapability(self, nums: List[int], k: int) -> int:
+    def minCapability(self, nums, k: int) -> int:
         n = len(nums)
         def isPossible(x):
             count = 0

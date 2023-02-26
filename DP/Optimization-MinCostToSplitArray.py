@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class Solution:
     def minCost(self, nums, k) -> int:
         n = len(nums)
