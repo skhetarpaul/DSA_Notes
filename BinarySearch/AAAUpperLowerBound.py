@@ -1,6 +1,7 @@
 # https://www.youtube.com/watch?v=gcYvFVZ_LUA&t=513s
 '''Lower bound: either the element if it is present in the array or just greater element.
 Upper bound: Just greater element, not the same element (strictly greater element)'''
+'''Thisi is equivalent to finding bisec.bisect_left() for lower bound and bisect.bisect_right for element>'''
 def findNextUpper(target, arr):
     beg, end = 0, len(arr)-1
     while end-beg>1:

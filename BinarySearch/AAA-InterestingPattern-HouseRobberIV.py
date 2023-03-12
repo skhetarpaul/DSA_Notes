@@ -8,7 +8,10 @@ If no idea, then possible hints could be:
     Length of array,
     Given are a set of conditions that can somehow be checked in o(n)
     Maxima of minimas or minima of maximas
-    arr element could reach upto: 10**9'''
+    arr element could reach upto: 10**9
+    
+    
+    Usually it is applied for minimization problems i guess.'''
 
 class Solution:
     def minCapability(self, nums, k: int) -> int:

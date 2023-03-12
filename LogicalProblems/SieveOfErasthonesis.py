@@ -13,4 +13,4 @@ def findAllPrimes(n):
             trueprimes.append(i)
     return trueprimes
 
-print(len(findAllPrimes(1000000)))
+print((findAllPrimes(1000000)[0]))
