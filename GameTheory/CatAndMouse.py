@@ -51,3 +51,7 @@ class Solution:
                     dcache[(m,c,moves)] = ans
                     return ans
         return dp(1,2,0)
+    
+
+
+#Bottom up approach:

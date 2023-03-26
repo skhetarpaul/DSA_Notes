@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 
-# https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/
+# https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description//
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
         idict = {}
