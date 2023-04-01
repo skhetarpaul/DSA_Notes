@@ -1,5 +1,5 @@
 Points to consider:
-    Dijkstra Algorithm- O(ElogV)
+    Dijkstra Algorithm- O(V**2)
         ->Can be implemented by set and Priority Queue
         ->Single source shortest pth calculation
         ->Does not work with negative edge weight

@@ -1,25 +1,26 @@
-# https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
-from collections import deque
+#User function Template for python347
 
+'''Important points to ponder over:
+Why deque: Because I want control over left elements as well. I want to see what is q[0]
+'''
+from collections import deque
 def printFirstNegativeInteger( A, N, K):
     # code here
-    arr = A
-    ans = []
     q = deque()
-    i,j = 0,0
+    i, j=0,0
+    ans = []
     while j<N:
-        if arr[j]<0:
-            q.append([arr[j],j])
+        if A[j]<0:
+            q.append(j)
         if j-i+1<K:
             j+=1
         else:
+            if not len(q)==0 and q[0]<j-K+1:
+                q.popleft()
             if len(q)==0:
                 ans.append(0)
             else:
-                neg = q.popleft()
-                ans.append(neg[0])
-                if i<neg[1]:
-                    q.appendleft(neg)
+                ans.append(A[q[0]])
             i+=1
             j+=1
     return ans

@@ -1,0 +1,8 @@
+Find the largest element in the array
+Find the second larges element in array- 2 pass and 1 pass
+Quick sort algorithm
+Merge sort algorithm
+Remove duplicates in place in an array O(nlogn) -> O(n) without any extra space
+
+Left rotate array by one place- Optimized o(n) approach, space: o(1)
+Left rotate by k places- That's a brute -> Optimal thing in concern of space(Optimal approach, reverse array 3 times)
