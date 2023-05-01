@@ -1,0 +1,3 @@
+Check basic operations:
+Stack with Queue
+Variations of Next Greater/smaller elements- You can seek some help from StockSpanner or MaxRectangleInHistogram
